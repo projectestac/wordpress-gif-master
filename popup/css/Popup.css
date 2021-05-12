@@ -27,7 +27,15 @@ body {
 
 .toggle_source{
 	border-bottom: 1px solid #f3f3f3;
+
+/* XTEC ************ MODIFICAT - Hidden selector of gif source. */
+/* 2021.05.12 @aginard */
+	display: none;
+/*
 	display: flex;
+*/
+/* ************ FI */
+
 }
 .toggle_source li{
     cursor: pointer;
