@@ -70,7 +70,15 @@ if(is_admin()){
 	add_action('admin_menu', 'gifm_admin_config');
 	if (!function_exists('gifm_admin_config')) {
 		function gifm_admin_config() {
-			add_options_page('GIF Master', 'GIF Master', 'manage_options', 'gifm', 'gifm_config_callback'); 
+
+			// XTEC ************ AFEGIT - Blocked access to options page to all users but xtecadmin
+			// 2021.05.12 @aginard
+			if ( ! is_xtec_super_admin() ) {
+				return ;
+			}
+			// ************ FI
+
+			add_options_page('GIF Master', 'GIF Master', 'manage_options', 'gifm', 'gifm_config_callback');
 		}
 	}
 	if (!function_exists('gifm_config_callback')) {
