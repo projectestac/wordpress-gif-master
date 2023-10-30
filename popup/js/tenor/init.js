@@ -34,9 +34,9 @@ function load_gifs(gifs){
 	var _frag = document.createDocumentFragment();
 	jQuery(gifs).each(function(id, gif){
 		id = gif['id'];
-		prvw = gif['media'][0].nanogif['url'];
-		medium_img = gif['media'][0].tinygif['url'];
-		orig = gif['media'][0].gif['url'];
+		prvw = gif['media_formats'].nanogif['url'];
+		medium_img = gif['media_formats'].tinygif['url'];
+		orig = gif['media_formats'].gif['url'];
 		var _li = newT.li({
 						clss:"tenor_gif_li",
 						draggable:true,
@@ -129,12 +129,12 @@ function grab_data(cmd){
 		var search_term = jQuery("#tnr-searchbar-input").val();
 		if(search_term == ''){ return; }
 		// using default locale of en_US
-		var search_url = "https://g.tenor.com/v1/search?q=" + search_term + "&key=" + apikey + "&limit=" + lmt;
+		var search_url = "https://tenor.googleapis.com/v2/search?q=" + search_term + "&key=" + apikey + "&limit=" + lmt; // https://g.tenor.com/v1
 		httpGetAsync(search_url,tenorCallback_search);
 	}
 	
 	if(cmd == 'trending'){
-		var trending_url = "https://g.tenor.com/v1/trending?key=" + apikey + "&limit=" + lmt;
+		var trending_url = "https://tenor.googleapis.com/v2/featured?key=" + apikey + "&limit=" + lmt;
 		httpGetAsync(trending_url,tenorCallback_trending);
 	}
 	
