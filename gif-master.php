@@ -2,8 +2,8 @@
 /**
 * Plugin Name: GIF Master - Awesome GIFs with Giphy and Tenor
 * Description: Easily Search and Insert gifs within your WordPress website from world's largest gif hosts.
-* Version: 1.0.0
-* Author: Deepak Khokhar, Surender Devadmin
+* Version: 1.0.1
+* Author: Media Jedi
 * Author URI: https://mediajedi.com/
 * License: GPL+2
 * Text Domain: gif-master
@@ -107,7 +107,7 @@ if(is_admin()){
 								</th>
 								<td>
 									<input type="text" name="gifm_tenor_api" id="gifm_tenor_api" style="min-width: 350px;" value="<?php echo $gifm_tenor_api; ?>">
-									<a href="https://tenor.com/developer/keyregistration" target="_blank"> Create one Here</a>
+									<a href="https://developers.google.com/tenor/guides/quickstart#setup" target="_blank"> Create one Here (v2).</a> <span>If you used v1 key in the past, please create a new one for v2</span>
 								</td>
 							</tr>
 							<tr>

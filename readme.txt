@@ -1,14 +1,14 @@
 === GIF Master - Awesome GIFs with Giphy and Tenor ===
 Contributors: deepakkite, mrking2201
 Tags: gif, animated gifs, giphy, tenor, tenor gifs, animated images, free gifs
-Requires at least: 4.0
-Tested up to: 5.7.1
-Stable tag: 1.0.0
-Requires PHP: 5.2.4
+Requires at least: 6.0
+Tested up to: 6.4.2
+Stable tag: 1.0.1
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to insert gifs from Giphy and Tenor.
+GIF Master WordPress plugin allows you to insert gifs from Giphy and Tenor into your WordPress pages and posts.
 
 == Description ==
 
@@ -48,7 +48,7 @@ You can install the Plugin in two ways.
 
 Go to Settings > GIF Master and enter API keys from your Tenor and Giphy accounts.
 You can create these API keys from below links:
-Tenor API key - [https://tenor.com/developer/keyregistration](https://tenor.com/developer/keyregistration)
+Tenor API key (updated v2) - [https://developers.google.com/tenor/guides/quickstart#setup](https://developers.google.com/tenor/guides/quickstart#setup)
 Giphy API key - [https://developers.giphy.com/dashboard/?create=true](https://developers.giphy.com/dashboard/?create=true) and select API key.
 
 == Screenshots ==
@@ -59,7 +59,7 @@ Giphy API key - [https://developers.giphy.com/dashboard/?create=true](https://de
 
 == Features ==
 
-* Easy to use, simple configurations.
+* Easy to use, No configurations.
 
 * Super fast loading of Gifs.
 
@@ -72,5 +72,9 @@ Giphy API key - [https://developers.giphy.com/dashboard/?create=true](https://de
 * Seamless integration with Giphy and Tenor.
 
 == Changelog ==
+
+= 1.0.1 =
+* 2022-07-20
+* [Improved] - Tenor API version updated from v1 to v2 as v1 API keys are not supported anymore. Please get a new v2 API key and update under plugin's settings.
 
 == Upgrade Notice ==
